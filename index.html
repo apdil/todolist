@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h2>TOTO</h2>
+        <form action="maison" methode="post">
+            <div>
+                <label for="title">Entrez un titre :</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div>
+                <label for="commit">Commentaire :</label>
+                <input type="text" id="commit" name="commit">
+            </div>
+            <div>
+                <button type="submit">Envoyez</button>
+            </div>
+        </form>
+    </section>
+    <h2>REVIEW</h2>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e){
+            e.preventDefault();
+            let valeur = document.querySelector("input").value;
+            let comment = document.querySelector("#commit").value;
+            let newdiv = document.createElement("div"); //debut creation div
+            newdiv.id= "divcreat";
+            document.body.appendChild(newdiv); // fin creation div
+            newdiv.textContent += valeur + comment;
+        });
+    </script>
+</body>
+</html>
