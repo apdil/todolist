@@ -36,10 +36,9 @@
             document.body.appendChild(newdiv);
             newdiv.textContent = valeur + comment;
             newdiv.appendChild(newbutt); //fin creation button
-            newbutt.addEventListener("submit", function(even){
-
-            });
+            newdiv.addEventListener("click", function(even){
             document.body.removeChild(newdiv);
+            });
         });
     </script>
 </body>
