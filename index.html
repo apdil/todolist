@@ -30,9 +30,16 @@
             let valeur = document.querySelector("input").value;
             let comment = document.querySelector("#commit").value;
             let newdiv = document.createElement("div"); //debut creation div
-            newdiv.id= "divcreat";
-            document.body.appendChild(newdiv); // fin creation div
-            newdiv.textContent += valeur + comment;
+            let newbutt = document.createElement("button"); //debut creation button
+            newbutt.textContent = "Delete";
+            newbutt.type = "submit";
+            document.body.appendChild(newdiv);
+            newdiv.textContent = valeur + comment;
+            newdiv.appendChild(newbutt); //fin creation button
+            newbutt.addEventListener("submit", function(even){
+
+            });
+            document.body.removeChild(newdiv);
         });
     </script>
 </body>
