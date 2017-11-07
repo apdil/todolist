@@ -1,6 +1,6 @@
-## Aprentissage
+# Aprentissage
 
-# Création d'une TodoList
+## Création d'une TodoList
 
 __outils :__
 
